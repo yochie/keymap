@@ -109,19 +109,19 @@ bool oled_task_user(void) {
         case BASE:
             //not sure why this has to be inverted...
             if (default_layer_state != GAME){
-                oled_write_P(PSTR("Gaming\n"), false);
+                oled_write_P(PSTR("GAMING\n"), false);
             } else {
-                oled_write_P(PSTR("Base\n"), false);
+                oled_write_P(PSTR("BASE\n"), false);
             }
             break;
         case NUMS_NAV:
-            oled_write_P(PSTR("Nums\n"), false);
+            oled_write_P(PSTR("NUMS\n"), false);
             break;
         case SYMBOLS:
-            oled_write_P(PSTR("Symbols\n"), false);
+            oled_write_P(PSTR("SYMBOLS\n"), false);
             break;
         case MEDIA:
-            oled_write_P(PSTR("Media\n"), false);
+            oled_write_P(PSTR("MEDIA\n"), false);
             break;
         default:
             // Or use the write_ln shortcut over adding '\n' to the end of your string
