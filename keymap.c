@@ -107,8 +107,10 @@ bool oled_task_user(void) {
 
     switch (get_highest_layer(layer_state)) {
         case BASE:
-            //not sure why this has to be inverted...
-            if (default_layer_state != GAME){
+            //biton32 returns most significant bit index
+	    //apparently default_layer_state is a bit mask of layers?
+	    //cant find docs about this...
+            if (biton32(default_layer_state) == GAME){
                 oled_write_P(PSTR("GAMING\n"), false);
             } else {
                 oled_write_P(PSTR("BASE\n"), false);
