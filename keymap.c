@@ -137,3 +137,15 @@ bool oled_task_user(void) {
 }
 
 #endif
+
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_D:
+        case SFT_K:
+        case CTL_F:
+        case CTL_J:
+            return TAPPING_TERM - 50;;
+        default:
+            return TAPPING_TERM;
+    }
+}
