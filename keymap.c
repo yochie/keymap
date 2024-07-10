@@ -115,7 +115,7 @@ bool oled_task_user(void) {
             }
             break;
         case NAV:
-            oled_write_P(PSTR("NUMS\n"), false);
+            oled_write_P(PSTR("NAV\n"), false);
             break;
         case SYM:
             oled_write_P(PSTR("SYMBOLS\n"), false);
