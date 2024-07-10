@@ -114,13 +114,13 @@ bool oled_task_user(void) {
                 oled_write_P(PSTR("BASE\n"), false);
             }
             break;
-        case NUMS_NAV:
+        case NAV:
             oled_write_P(PSTR("NUMS\n"), false);
             break;
-        case SYMBOLS:
+        case SYM:
             oled_write_P(PSTR("SYMBOLS\n"), false);
             break;
-        case MEDIA:
+        case MDIA:
             oled_write_P(PSTR("MEDIA\n"), false);
             break;
         default:
